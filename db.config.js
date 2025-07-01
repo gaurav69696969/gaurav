@@ -10,8 +10,8 @@ export async function dbConnection() {
   try {
     await sequelize.authenticate();
     await sequelize.sync({ alter: true });
-    console.log("✅ DB has been connected");
+    console.log("DB has been connected");
   } catch (error) {
-    console.log("❌ Error while connecting DB", error);
+    console.log("Error while connecting DB", error);
   }
 }
